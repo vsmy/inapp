@@ -10,7 +10,7 @@ set('application', 'inapp');
 set('repository', 'git@github.com:vsmy/inapp.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
-set('git_tty', true); 
+set('git_tty', false);
 
 // Shared files/dirs between deploys 
 add('shared_files', []);
@@ -25,7 +25,7 @@ add('writable_dirs', []);
 host('intobi.app')
     ->user('deployer')
     ->identityFile('~/.ssh/deployerkey')
-    ->set('deploy_path', '/var/www/html/test/inapp');
+    ->set('deploy_path', '/var/www/html/test/inapp/inapp');
 
 
 task('build', function () {

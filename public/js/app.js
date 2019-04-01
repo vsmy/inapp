@@ -1065,8 +1065,8 @@ document.querySelectorAll(".".concat(successMsgClass)).forEach(function (success
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-__webpack_require__(/*! C:\openServer\OSPanel\domains\intobiapp\inapp_test\inapp\resources\js\app.js */"./resources/js/app.js");
-module.exports = __webpack_require__(/*! C:\openServer\OSPanel\domains\intobiapp\inapp_test\inapp\resources\sass\app.scss */"./resources/sass/app.scss");
+__webpack_require__(/*! C:\openServer\OSPanel\domains\intobiapp\inapp_test\inappdep\inapp\resources\js\app.js */"./resources/js/app.js");
+module.exports = __webpack_require__(/*! C:\openServer\OSPanel\domains\intobiapp\inapp_test\inappdep\inapp\resources\sass\app.scss */"./resources/sass/app.scss");
 
 
 /***/ })
