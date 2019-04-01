@@ -2,7 +2,6 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
-
 // Project name
 set('application', 'inapp');
 
@@ -32,11 +31,24 @@ host('intobi.app')
 task('build', function () {
     run('cd {{release_path}} && build');
 });
+task('deploy', [
+    'deploy:info',
+    'deploy:prepare',
+    'deploy:lock',
+    'deploy:release',
+    'deploy:update_code',
+    'deploy:shared',
+    'deploy:unlock',
+    'cleanup',
+    'success'
+]);
+
 
 // [Optional] if deploy fails automatically unlock.
 after('deploy:failed', 'deploy:unlock');
 
 // Migrate database before symlink new release.
 
-before('deploy:symlink', 'artisan:migrate');
+
+
 
