@@ -4,10 +4,10 @@ namespace Deployer;
 require 'recipe/laravel.php';
 
 // Project name
-set('application', 'inapptest');
+set('application', 'inapp');
 
 // Project repository
-set('repository', 'git@domain.com:username/repository.git');
+set('repository', 'git@github.com:vsmy/inapp.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', true); 
@@ -22,10 +22,11 @@ add('writable_dirs', []);
 
 // Hosts
 
-host('project.com')
-    ->set('deploy_path', '~/{{application}}');    
-    
-// Tasks
+host('intobi.app')
+    ->user('deployer')
+    ->identityFile('~/.ssh/deployerkey')
+    ->set('deploy_path', '/var/www/html/test/inapp');
+
 
 task('build', function () {
     run('cd {{release_path}} && build');
