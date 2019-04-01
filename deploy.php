@@ -7,10 +7,11 @@ require 'recipe/laravel.php';
 set('application', 'inapp');
 
 // Project repository
-set('repository', 'git@github.com:vsmy/inapp.git');
+set('repository', 'https://github.com/vsmy/inapp.git');
 
 // [Optional] Allocate tty for git clone. Default value is false.
 set('git_tty', false);
+set('ssh_multiplexing', false);
 
 // Shared files/dirs between deploys 
 add('shared_files', []);
