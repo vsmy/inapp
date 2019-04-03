@@ -11184,11 +11184,11 @@ form {
 
 .faq-section {
   background: #fff;
-  min-height: 75vh;
+  min-height: 100vh;
   padding: 10vh 0 0;
-  background-image: url(/images/faq.svg);
   background-repeat: no-repeat;
   background-position: left;
+  background-attachment: fixed;
 }
 
 .faq-title h2 {
@@ -11254,11 +11254,13 @@ form {
   cursor: pointer;
   padding-top: 20px;
   padding-bottom: 20px;
+  display: flex;
+  align-items: center;
 }
 
 .faq .card .card-header .faq-title .badge {
-  display: inline-block;
   width: 25px;
+  display: flex;
   height: 25px;
   float: left;
   border-radius: 100px;
@@ -11268,11 +11270,13 @@ form {
   color: #fff;
   font-size: 15px;
   margin-right: 20px;
+  justify-content: center;
+  align-items: center;
 }
 
 .faq .card .card-body {
   padding: 30px;
-  padding-left: 35px;
+  padding-left: 75px;
   padding-bottom: 16px;
   font-weight: 400;
   font-size: 16px;

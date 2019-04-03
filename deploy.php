@@ -86,9 +86,9 @@ task('deploy:clean-cached-data', function() {
 });
 
 // Перезапустить PHP после успешного деплоя
-task('reload:php-fpm', function() {
-    run('sudo /usr/sbin/service php7.0-fpm restart');
-});
+//task('reload:php-fpm', function() {
+//    run('sudo /usr/sbin/service php7.0-fpm restart');
+//});
 
 task('deploy', [
     'deploy:prepare',
@@ -109,10 +109,10 @@ task('deploy', [
 after('deploy', 'success');
 
 // После деплоя перезапустим php
-after('deploy', 'reload:php-fpm');
+//after('deploy', 'reload:php-fpm');
 
 // После отката на прошлый релиз - тоже перезапустим его
-after('rollback', 'reload:php-fpm');
+//after('rollback', 'reload:php-fpm');
 
 
 

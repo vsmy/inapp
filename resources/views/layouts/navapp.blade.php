@@ -1,5 +1,4 @@
 <header >
-
     <nav class="navbar navbar-expand-lg navbar-light ">
         <a href="{{route('home')}}"> <img class="logo" src="/images/icons/logo.png" alt="Logo" ></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,7 +17,8 @@
                     <a href="{{route('instaapp')}}"><img style="width: 30px;margin: 10px;" src="https://instagram.intobi.app/images/setting/logo.svg" alt="">Instagram in Store</a>
                  </div>
                 </div>
-                <a style="color: white; background: {{$color}}" href="{{$link}}}" class="btn btn-primary">Install</a>
+                <a href="#faq">FAQ</a>
+                <a style="color: white" href="#contact_us" class="btn btn-primary">Contact Us</a>
             </ul>
 
             <div class="social-icon">

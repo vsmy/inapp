@@ -6,10 +6,23 @@ $color = '#ff4769';
 @include('layouts.navapp')
 
 @section('content')
+    <div class="row justify-content-center">
+        <h3 class="title text-center">Instagram in Store</h3>
+    </div>
 <section class=" text-center">
-    <div class="fon"></div>
+
         <div class="container">
+
             <div class="row">
+
+                <div class="input-group mb-3">
+                    <input required type="url" class="form-control install_link" placeholder="https://your_instagram_shop"  aria-label="Recipient's username" aria-describedby="basic-addon2">
+                    <div class="input-group-append">
+                        <button style="background: {{$color}}" type="submit" class="btn btn-primary install">Install</button>
+                    </div>
+                </div>
+
+
                 <div class="col-md-6">
 
                     <h5 class="subtitle" style="text-transform: unset">
@@ -36,12 +49,14 @@ $color = '#ff4769';
 
 
                 <div class="col-md-6 col-ms-6 d-flex align-items-center">
-                    <div id="youtube_video_container" class="embed-responsive embed-responsive-16by9 z-depth-1-half"><iframe class="embed-responsive-item" src="https://www.youtube-nocookie.com/embed/20hpe8ZvBbI" allowfullscreen=""></iframe></div>
+                <img src="/images/faq.svg" alt="">
                 </div>
             </div>
         </div>
 </section>
-<section class="faq-section">
+
+
+<section id="faq" class="faq-section">
 
     <div class="container">
         <div class="row">
@@ -49,6 +64,7 @@ $color = '#ff4769';
                 <div class="faq-title text-center pb-3 d-flex flex-column">
                     <h2>FAQ
                     </h2>
+                    <a style="cursor: pointer; color: black" href="/photoselection">Back </a>
                 </div>
             </div>
             <div class="col-md-12 ">
@@ -57,7 +73,7 @@ $color = '#ff4769';
                         <div class="card-header" id="faqHeading-1">
                             <div class="mb-0">
                                 <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1" data-aria-expanded="true" data-aria-controls="faqCollapse-1">
-                                    <span class="badge">1</span>How do I install InstaApp?
+                                    <div class="badge">1</div><div>How do I install InstaApp?</div>
                                 </h5>
                             </div>
                         </div>
@@ -162,6 +178,22 @@ $color = '#ff4769';
         </div>
     </div>
 </section>
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" ></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.4.1/js/mdb.min.js" ></script>
+<script >
+
+        $('.install').click(function () {
+            let install = $('.install_link');
+            let install_url = 'https://instagram.intobi.app/install?shop=' + install.val();
+            console.log(install_url);
+            window.location.href = install_url;
+        })
+
+
+</script>
 <style>
 
     .subtitle {
