@@ -29,7 +29,7 @@ host('intobi.app')
 
 
 task('build', function () {
-    run('cd {{release_path}} && build');
+    run('cd {{release_path}} && npm run prod');
 
 });
 task('deploy', [
@@ -46,7 +46,6 @@ task('deploy', [
     'cleanup',
     'success'
 ]);
-task('build', 'npm build');
 
 
 

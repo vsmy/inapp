@@ -11,12 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
 
-});
 
 Route::post('/contact-us',    'Controller@contact_us')   ->name('contact_us');
+Route::get('/in_app',    'Controller@in_app')   ->name('instaapp');
+Route::get('/',    'Controller@home')   ->name('home');
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');

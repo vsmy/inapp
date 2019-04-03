@@ -24,4 +24,10 @@ class Controller extends BaseController
 
        return back();
     }
+    public  function in_app () {
+       return view('products.instaApp');
+    }
+    public  function home () {
+        return view('pages.home');
+    }
 }
