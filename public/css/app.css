@@ -11205,7 +11205,7 @@ form {
   left: 50%;
   width: 60px;
   height: 2px;
-  background: #FF4769;
+  background: #7724CA;
   bottom: -25px;
   margin-left: -30px;
 }
@@ -11259,16 +11259,16 @@ form {
 }
 
 .faq .card .card-header .faq-title .badge {
-  width: 25px;
+  width: 30px;
   display: flex;
-  height: 25px;
+  height: 30px;
   float: left;
   border-radius: 100px;
   line-height: unset !important;
   text-align: center;
-  background: #FF4769;
+  background: #711fc263;
   color: #fff;
-  font-size: 15px;
+  font-size: 14px;
   margin-right: 20px;
   justify-content: center;
   align-items: center;
@@ -11290,7 +11290,17 @@ form {
   margin-bottom: 14px;
 }
 
+.dropdown-menu {
+  min-width: 17em;
+  border: unset;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+}
+
 @media (max-width: 991px) {
+  .dropleft {
+    margin-right: unset;
+  }
+
   .faq {
     margin-bottom: 30px;
   }
@@ -11298,6 +11308,33 @@ form {
   .faq .card .card-header .faq-title {
     line-height: 26px;
     margin-top: 10px;
+  }
+
+  .btn-group,
+  .btn-group-vertical {
+    display: block;
+  }
+
+  .dropdown-menu {
+    box-shadow: unset;
+  }
+
+  .dropdown-toggle {
+    text-align: center;
+  }
+
+  .dropdown-toggle .new-link {
+    display: none;
+  }
+}
+
+@media (max-width: 425px) {
+  .badge {
+    display: none !important;
+  }
+
+  .card-body {
+    padding-left: 30px !important;
   }
 }
 

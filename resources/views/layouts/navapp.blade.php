@@ -11,10 +11,34 @@
                 <div style="cursor: pointer;" class="btn-group dropleft">
                     <div class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                        Apps
+                        <span style="content: url(/images/icons/new.svg);width: 20px;height: 20px;" class="new-link"></span>
                     </div>
-                    <span style="content: url(/images/icons/new.svg);width: 20px;height: 20px;" class="new-link"></span>
-                    <div style=" min-width: 17em; border: unset; box-shadow: 0 0 20px rgba(0,0,0,0.08);"  class="dropdown-menu">
-                    <a href="{{route('instaapp')}}"><img style="width: 30px;margin: 10px;" src="https://instagram.intobi.app/images/setting/logo.svg" alt="">Instagram in Store</a>
+<style>
+    .dropdown-toggle:before  {
+        content: unset !important;
+    }
+    .dropdown-menu li:hover {
+        background-color: #7724ca17;
+        transition: all ease 0.6s;
+    }
+    .dropdown-menu {
+        padding: unset !important;
+    }
+    .dropleft .dropdown-menu {
+        top: 33px !important;
+        right: 0% !important;
+        left: auto !important;
+        margin-top: 0 !important;
+        margin-right: 0.125rem !important;
+    }
+</style>
+                    <div  class="dropdown-menu">
+                        <a href="{{route('instaapp')}}">
+                            <li style="     padding: 20px 20px 20px 20px;     font-size: 18px;
+    ">
+                                <img style="width: 30px;margin: 10px 30px 10px 10px;" src="https://instagram.intobi.app/images/setting/logo.svg" alt="">Instagram in Store
+                            </li>
+                        </a>
                  </div>
                 </div>
                 <a href="#faq">FAQ</a>

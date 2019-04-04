@@ -95,11 +95,11 @@ task('deploy', [
     'deploy:release',
     'deploy:update_code',            // Скачать последний код с гитхаба
     'deploy:shared',                 // Создать ссылки на общие данные
-    'deploy:vendors',                // Обновить компоненты композера
-    'deploy:clean-cached-data',      // Очистить все закешированные данные
-    'deploy:create-route-cache',     // Создать кеш для правил роутинга
-    'deploy:create-config-cache',    // Создать кеш для файлов конфигураций
-    'deploy:install-npm',            // Обновить NPM компоненты
+//    'deploy:vendors',                // Обновить компоненты композера
+//    'deploy:clean-cached-data',      // Очистить все закешированные данные
+//    'deploy:create-route-cache',     // Создать кеш для правил роутинга
+//    'deploy:create-config-cache',    // Создать кеш для файлов конфигураций
+//    'deploy:install-npm',            // Обновить NPM компоненты
     'deploy:compile-assets',         // Скомпилировать фронтенд файлы
 //    'deploy:migrations',             // Применить миграции
     'deploy:symlink',                // создать ссылку текущего релиза на этот
